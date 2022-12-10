@@ -13,36 +13,25 @@ window.onload = function() {
   let who = ["Chuck Norris ", "Dolly Parton ", "Pee Wee Herman ", "Cardi-B "];
   let action = ["ate ", "threw away ", "threw up on ", "spilled egg nog on "];
   let what = ["my homework ", "my code ", "my assignment ", "my laptop "];
-  let when = ["before class!", "during the duck race!", "just now!", "today!"];
+  let when = [
+    "before class!",
+    "during the duck race!",
+    "just now!",
+    "this morning!"
+  ];
 
-  // who
-  function whoGenerator() {
-    let i = Math.floor(Math.random() * who.length);
-    particularExcuse += who[i];
+  function generator(array) {
+    let i = Math.floor(Math.random() * array.length);
+    particularExcuse += array[i];
   }
 
-  // action
-  function actionGenerator() {
-    let i = Math.floor(Math.random() * action.length);
-    particularExcuse += action[i];
-  }
+  console.log(Math.floor());
 
-  // what
-  function whatGenerator() {
-    let i = Math.floor(Math.random() * what.length);
-    particularExcuse += what[i];
-  }
-
-  // when
-  function whenGenerator() {
-    let i = Math.floor(Math.random() * when.length);
-    particularExcuse += when[i];
-  }
-
-  whoGenerator();
-  actionGenerator();
-  whatGenerator();
-  whenGenerator();
+  generator(who);
+  generator(action);
+  generator(what);
+  generator(when);
 
   document.getElementById("excuse").innerHTML = particularExcuse;
+  document.getElementById("excuse").style.color = "orange";
 };
